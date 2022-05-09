@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Process Queue - Hypercar Service</title>
+</head>
+<body>
+    <div>Change oil queue: {{ oil_len }}</div>
+    <div>Inflate tires queue: {{ tires_len }}</div>
+    <div>Get diagnostic queue: {{ diag_len }}</div>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Process next</button>
+    </form>
+</body>
+</html>
